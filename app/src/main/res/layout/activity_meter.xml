@@ -2,18 +2,22 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:plainpie="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kidup.kidupui.ActivityMeterActivity">
 
-    <TextView
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:layout_marginTop="1dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="You've moved:"
-         />
-
+    <az.plainpie.PieView
+        android:id="@+id/pieView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        plainpie:inner_pie_padding="20"
+        plainpie:percentage="75"
+        plainpie:percentage_size="30"
+        plainpie:inner_text_visibility="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="130dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>
