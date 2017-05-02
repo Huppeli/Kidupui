@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:plainpie="http://schemas.android.com/apk/res-auto"
     android:id="@+id/tableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    <TableRow
+    <LinearLayout
         android:id="@+id/tableRow1"
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:layout_weight="1" >
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/button1"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_weight="1"
-            android:text="Button #1"
-            android:textColor="@color/colorPrimaryDark"
-            app:backgroundTint="@color/kidupBrightBlue"
-            android:onClick="openActivitymeter"/>
+            android:background="@color/colorAccent"
+            android:onClick="openActivitymeter">
+            <az.plainpie.PieView
+                android:id="@+id/pieView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                plainpie:inner_pie_padding="20"
+                plainpie:percentage="75"
+                plainpie:percentage_size="30"
+                plainpie:inner_text_visibility="true"
+             />
+            <!-- layout_margin = hack to get it center -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Activity level"
+                android:gravity="center"
+                android:layout_below="@+id/pieView"
+                />
+
+        </RelativeLayout>
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="0dp"
@@ -27,8 +46,9 @@
             android:text="Button #2"
             android:textColor="@color/colorAccent"
             app:backgroundTint="@color/kidupDarkBlue"/>
-    </TableRow>
-    <TableRow
+
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/tableRow2"
         android:layout_height="0dp"
         android:layout_width="match_parent"
@@ -49,5 +69,5 @@
             android:text="Button #4 "
             android:textColor="@color/kidupDarkBlue"
             app:backgroundTint="@color/kidupNewGreen"/>
-    </TableRow>
+    </LinearLayout>
 </TableLayout>
