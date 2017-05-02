@@ -10,34 +10,36 @@
         android:id="@+id/tableRow1"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="@drawable/layout_bg"
+            android:gravity="center"
             android:onClick="openActivitymeter">
+
             <az.plainpie.PieView
                 android:id="@+id/pieView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 plainpie:inner_pie_padding="20"
-                plainpie:percentage="75"
-                plainpie:percentage_size="30"
                 plainpie:inner_text_visibility="true"
-             />
+                plainpie:percentage="75"
+                plainpie:percentage_size="30" />
             <!-- layout_margin = hack to get it center -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Activity level"
-                android:gravity="center"
                 android:layout_below="@+id/pieView"
-                />
-
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Activity level" />
         </RelativeLayout>
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="0dp"

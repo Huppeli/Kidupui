@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kidup.kidupui.ActivityMeterActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="#EBEBEB"
@@ -24,9 +24,26 @@
         plainpie:inner_text_visibility="true"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="10dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/stepsMoved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've moved ## steps"
+            android:layout_toRightOf="@+id/pieView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time earned:"
+            android:layout_below="@+id/stepsMoved"
+            android:layout_toRightOf="@+id/pieView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
