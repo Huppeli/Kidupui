@@ -39,16 +39,46 @@
                 android:gravity="center"
                 android:text="Activity level" />
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/layout_bg_color"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/tasksLeft"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_assignment"
+                />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tasksLeft"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Tasks"
+                android:textColor="#ffffff"/>
+
+
+
+        </RelativeLayout>
+        <!-- Old button
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Button #2"
+            android:text="Tasks"
             android:textColor="@color/colorAccent"
             app:backgroundTint="@color/kidupDarkBlue"/>
-
+        -->
     </LinearLayout>
     <LinearLayout
         android:id="@+id/tableRow2"
@@ -63,6 +93,7 @@
             android:text="Button #3 "
             android:textColor="@color/kidupDarkBlue"
             app:backgroundTint="@color/kidupNewOrange"/>
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button4"
             android:layout_width="0dp"
@@ -70,6 +101,6 @@
             android:layout_weight="1"
             android:text="Button #4 "
             android:textColor="@color/kidupDarkBlue"
-            app:backgroundTint="@color/kidupNewGreen"/>
+            app:backgroundTint="@color/kidupNewGreen" />
     </LinearLayout>
 </TableLayout>

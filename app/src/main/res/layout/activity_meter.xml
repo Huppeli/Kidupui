@@ -9,7 +9,7 @@
     tools:context="com.kidup.kidupui.ActivityMeterActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
         android:background="#EBEBEB"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp">
